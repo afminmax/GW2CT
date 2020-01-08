@@ -3,7 +3,7 @@ print("Starting module imports....")
 import pyodbc
 import json
 import requests
-import datetime
+import datetime, time
 from pathlib import Path
 
 
@@ -43,8 +43,18 @@ print("Completed the API Queries Dictionary:")
 
 # SUBMIT API REQUESTS
 print("Submitting the API Queries to the GW2 API....")
-run_dts = datetime.datetime.now()
-run_name = 'run_' + run_dts.strftime("%Y-%m-%d %H.%M.%S") + '_'
+
+# get sql iso8601 offset timestamp 
+sql_dts = datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
+print(sql_dts)
+sql_dts_dict = {'dts':sql_dts}
+
+# kluge. redo this later. a second easier to format dts for the file run name
+filename_dts = datetime.datetime.utcnow()
+print(filename_dts)
+
+# build friendly filename for saved json
+run_name = 'run_' + filename_dts.strftime("%Y-%m-%d %H.%M.%S") + '_'
 print("The run name is: " + run_name)
 data_folder = Path("c:\gw2ct\json_get")
 
@@ -54,12 +64,12 @@ for key,value in apiKeyDict.items():
     r = requests.get(url=URL, params=None)
     data = r.json()
     # print(data)
+    data.append(sql_dts_dict)
     file_name = run_name + matCatsDict[key] + '_prices.json'
     with open(data_folder/file_name, 'w') as outfile:
         json.dump(data, outfile, indent=4)
 
 print("The queries have been submitted and written to disk. Ready for SQL!")
-
 
 
 
