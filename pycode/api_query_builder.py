@@ -10,10 +10,10 @@ from pathlib import Path
 print("Finished loading module imports....")
 
 print("Logging into SQL servver....")
-server = '*'
-database = '*'
-username = '*'
-password = '*'
+server = 'TABLA\SQLEXPRESS' 
+database = 'gw2cat' 
+username = 'devvm' 
+password = '30032'
 cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 print("SQL servver logged in....")
@@ -54,7 +54,8 @@ filename_dts = datetime.datetime.utcnow()
 print(filename_dts)
 
 # build friendly filename for saved json
-run_name = 'run_' + filename_dts.strftime("%Y-%m-%d %H.%M.%S") + '_'
+# run_name = 'run_' + filename_dts.strftime("%Y-%m-%d %H.%M.%S") + '_'
+run_name = filename_dts.strftime("%Y-%m-%d %H.%M.%S")
 print("The run name is: " + run_name)
 data_folder = Path("c:\gw2ct\json_get")
 
@@ -65,7 +66,7 @@ for key,value in apiKeyDict.items():
     data = r.json()
     # print(data)
     data.append(sql_dts_dict)
-    file_name = run_name + matCatsDict[key] + '_prices.json'
+    file_name = run_name + '_' + matCatsDict[key] + '_prices.json'
     with open(data_folder/file_name, 'w') as outfile:
         json.dump(data, outfile, indent=4)
 
