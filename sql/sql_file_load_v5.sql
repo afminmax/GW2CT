@@ -125,6 +125,6 @@ BEGIN
 	DECLARE @EndTime AS DATETIME, @StartTime AS DATETIME
 	SET @StartTime = (SELECT job_dts_start FROM job_import_log WHERE job_tid = @job_tid)
 	SET @EndTime = (SELECT job_dts_finished FROM job_import_log  WHERE job_tid = @job_tid)
-	UPDATE job_import_log SET job_time = (CAST(@EndTime - @StartTime AS TIME))
+	UPDATE job_import_log SET job_time = (CAST(@EndTime - @StartTime AS TIME)) WHERE job_tid = @job_tid
 
 END
