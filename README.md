@@ -11,3 +11,4 @@ Tue Jan 28 - Populated Trade Post pricing and Job Log tables with DateKey values
 Thur Jan 30 - Added SQL to rank by price, added table to track game events. <br/>
 Fri Jan 31 - Added gold compute function to SQL.
 Sat Feb 1 - Updating gold compute to switch to Copper based methods.
+Thur Feb 6 - Added first test SQL functions for Copper math
