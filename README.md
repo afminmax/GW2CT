@@ -13,4 +13,4 @@ Fri Jan 31 - Added gold compute function to SQL. <br/>
 Sat Feb 1 - Updating gold compute to switch to Copper based methods. <br/>
 Thur Feb 6 - Added first test SQL functions for Copper math <br/>
 Sat Feb 8 - First experiments with displaying raw tables and graphs with Chartjs. <br/>
-Tue Feb 11 - Set API Query to single file from 26 files. (Consolidated price) <br/>
+Tue Feb 11 - Set API Query to single file from 26 files. Transition time: 21:46 UTC. (Consolidated price) <br/>
