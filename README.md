@@ -15,3 +15,4 @@ Thur Feb 6 - Added first test SQL functions for Copper math <br/>
 Sat Feb 8 - First experiments with displaying raw tables and graphs with Chartjs. <br/>
 Tue Feb 11 - Set API Query to single file from 26 files. Transition time: 21:46 UTC. (Consolidated price) <br/>
 Wed Feb 12 - Created alpha order book using Python pandas data frames. <br/>
+Wef Feb 13 - Created alpha user inventory queries.
