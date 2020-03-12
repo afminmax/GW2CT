@@ -16,4 +16,5 @@ Sat Feb 8 - First experiments with displaying raw tables and graphs with Chartjs
 Tue Feb 11 - Set API Query to single file from 26 files. Transition time: 21:46 UTC. (Consolidated price) <br/>
 Wed Feb 12 - Created alpha order book using Python pandas data frames. <br/>
 Wed Feb 13 - Created alpha user inventory queries. <br/>
-Tue Mar 10 - Began table truncation design and initial cloud server planning.
+Tue Mar 10 - Began table truncation design and initial cloud server planning.  <br/>
+Thu Mar 12 - Setup HTML/CSS shell. 
