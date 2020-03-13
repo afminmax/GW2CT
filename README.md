@@ -17,4 +17,5 @@ Tue Feb 11 - Set API Query to single file from 26 files. Transition time: 21:46 
 Wed Feb 12 - Created alpha order book using Python pandas data frames. <br/>
 Wed Feb 13 - Created alpha user inventory queries. <br/>
 Tue Mar 10 - Began table truncation design and initial cloud server planning.  <br/>
-Thu Mar 12 - Setup HTML/CSS shell. 
+Thu Mar 12 - Setup HTML/CSS shell. <br/>
+Fir Mar 13 - Updated HTML/CSS shell rev 2.
